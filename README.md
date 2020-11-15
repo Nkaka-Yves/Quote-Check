@@ -5,7 +5,7 @@
 This is a an app where you can vote a qoute to make it priority and you can post your quotes and see how many like or dislike it.
 ## Setup/Installation Requirements
 * Open your browser
-* enter this link
+* enter this link https://nkaka-yves.github.io/Quote-Check/.
 * you will easily access the page
 ## Known Bugs
 No bugs every thing is set
