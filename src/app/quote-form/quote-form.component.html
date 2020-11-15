@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <div class="row">
+            <div class="col-md-5">
+                <textarea name="quote" id="desc" cols="50" rows="5" #desc="ngModel" required [(ngModel)]='newQuote.quote' class="form-control"></textarea>
+                <div [hidden]="desc.valid || desc.pristine" class="alert alert-danger">
+                    <p>Quote written is required</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <input type="text" name="author" id="author" [(ngModel)]="newQuote.author" #author="ngModel" placeholder="Name of author" class="form-control" required>
+                    <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                        <p>author name is required</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="publisher" id="publisher" [(ngModel)]="newQuote.creator" #publish="ngModel" placeholder="Name of Publisher" class="form-control" required>
+                    <div [hidden]="publish.valid || publish.pristine" class="alert alert-danger">
+                        <p>publisher name is required</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="date" name="createdDate" id="createdDate" [(ngModel)]="newQuote.createdDate" #date="ngModel" class="form-control" required>
+                    <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
+                        <p>Date is required</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add a Quote</button>
+    </form>
+</div>

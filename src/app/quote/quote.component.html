@@ -1,0 +1,38 @@
+<!-- <div class="container"> -->
+    <nav class="navbar navbar-expand-lg  pl-5 pr-5">
+        <a class="navbar-brand" href="#"><strong>Blogs</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="btHome">
+            <button (click)='formToggle()' class="btn btn-outline-dark" type="button">Create new
+                Quote</button>
+        </div>
+    </nav>
+    <h2 style="text-align: center;">Quotes</h2>
+        <div class="row" style="color: rgb(0, 18, 56);">
+            <div *ngFor='let quote of quotes; let i = index' class="col-md-4" id="card-ad">
+                <div class="card justify-content text-center">
+                    <div class="card-body" style="background-color: cadetblue;">
+                        <ng-template #loading>{{quote.quote}}</ng-template>
+                        <p appHighlight *ngIf='i==0&&quote.like>=1; else loading' class="card-text">{{quote.quote}}</p>
+                        <p>created on: {{quote.createdDate|date|uppercase}}</p>
+                        <p><small> <strong>Author: {{quote.author}}</strong></small></p>
+                        <div class="card-footer">
+                            <button class="btn btn-info" (click)='toggleDetails(i)'>Details</button>
+                            <app-quote-detail *ngIf='quote.showDescription' [quotes]='quote' (isComplete)='deleteQuote($event, i)' (check)='highVote($event,i)'>
+                            </app-quote-detail>
+                        </div>
+                    </div>
+                </div>
+           </div>
+           <div class="container">
+           
+            <hr>
+            <div class="formlink" *ngIf='formShow'>
+                <h4>Add new Quote</h4>
+                <app-quote-form (addQuote)='newQuote($event)'></app-quote-form>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->

@@ -1,0 +1,17 @@
+<div class="detail">
+    <br>
+    <div class="btnPointer">
+        <a (click)='upvotebtn()'>{{quotes.like}}
+            <img src="https://cdn3.iconfinder.com/data/icons/basicolor-votting-awards/24/210_vote_like_up_upvote-512.png"
+                alt="" width="30" height="30">
+        </a>
+        <a (click)='downvotebtn()'>{{quotes.dislike}}
+            <img src="https://cdn0.iconfinder.com/data/icons/user-interface-vol-5-4/66/7-512.png"
+                alt="" width="30" height="30">
+        </a>
+    </div>
+    <p class="card-text"><small> The quote was established {{quotes.createdDate|dayCount}} day(s)
+            ago</small> </p>
+    <p class="card-text"><small>Created by: {{quotes.creator}} </small></p>
+    <button (click)='deleteQuote(true)' class="btn btn-outline-danger">Delete Quote</button>
+</div>

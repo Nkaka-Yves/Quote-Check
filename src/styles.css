@@ -1,0 +1,41 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+* {
+    font-family: 'Big Shoulders Stencil Display', monospace;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./assets/gifone.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.nav-brand {
+    font-weight: 700;
+}
+
+.logo {
+    font-size: 30px;
+    color: rgb(0, 33, 71);
+}
+
+nav a {
+    color: rgb(153, 186, 196);
+}
+
+nav a:hover {
+    color: rgb(186, 206, 212);
+}
+
+nav {
+    background-color: rgb(72, 102, 129);
+    display: flexbox;
+}
+
+#btHome {
+    margin-left: 800px;
+}
